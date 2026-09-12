@@ -4,6 +4,9 @@ cadastro_clientes = pd.read_csv(r'CadastroClientes.csv',sep=';',decimal=',')
 cadastro_funcionarios = pd.read_csv(r'CadastroFuncionarios.csv',sep=';',decimal=',')
 base_servicos_prest = pd.read_excel(r'BaseServiçosPrestados.xlsx',decimal=',')
 
+#retirar colunas estado civil e cargo da tabela de funcionarios
+cadastro_funcionarios = cadastro_funcionarios.drop(['Estado Civil',"Cargo"],axis=1)
+
 #Calcula o Gasto Total salarial de cada funcionário da empresa
 calc_gasto_func = cadastro_funcionarios['Salario Base'] + cadastro_funcionarios['Impostos'] + cadastro_funcionarios['Beneficios'] + cadastro_funcionarios['VT'] + cadastro_funcionarios['VR']
 
