@@ -1,8 +1,8 @@
 import pandas as pd
 from IPython.display import display
-cadastro_clientes = pd.read_csv(r'/home/kaue1992/Área de trabalho/Codigos Python Impressionador/pandas-python/projeto_analise_dados/CadastroClientes.csv',sep=';',decimal=',')
-cadastro_funcionarios = pd.read_csv(r'/home/kaue1992/Área de trabalho/Codigos Python Impressionador/pandas-python/projeto_analise_dados/CadastroFuncionarios.csv',sep=';',decimal=',')
-base_servicos_prest = pd.read_excel(r'/home/kaue1992/Área de trabalho/Codigos Python Impressionador/pandas-python/projeto_analise_dados/BaseServiçosPrestados.xlsx',decimal=',')
+cadastro_clientes = pd.read_csv(r'CadastroClientes.csv',sep=';',decimal=',')
+cadastro_funcionarios = pd.read_csv(r'CadastroFuncionarios.csv',sep=';',decimal=',')
+base_servicos_prest = pd.read_excel(r'BaseServiçosPrestados.xlsx',decimal=',')
 
 #Calcula o Gasto Total salarial de cada funcionário da empresa
 calc_gasto_func = cadastro_funcionarios['Salario Base'] + cadastro_funcionarios['Impostos'] + cadastro_funcionarios['Beneficios'] + cadastro_funcionarios['VT'] + cadastro_funcionarios['VR']
