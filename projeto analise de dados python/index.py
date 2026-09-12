@@ -14,6 +14,10 @@ calc_gasto_func = cadastro_funcionarios['Salario Base'] + cadastro_funcionarios[
 total_gastos_func = pd.DataFrame({"Nome Funcionário": cadastro_funcionarios["Nome Completo"],
     "Gasto Total": calc_gasto_func})
 display(total_gastos_func)
+gasto_total_folha = total_gastos_func["Gasto Total"].sum()
+
+#Gasto total com folhas salariais
+print(f'Total de gasto com folha salarial R$ {gasto_total_folha}\n')
 
 #Calcular o faturamento Total da empresa = Fórmula = Cadastro_clientes['Valor do contrato mensal'] * Base_servicos_prest['Tempo Total de Contrato (Meses)']
 calc_fat_total = cadastro_clientes['Valor Contrato Mensal'] * base_servicos_prest['Tempo Total de Contrato (Meses)']
